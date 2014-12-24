@@ -1,0 +1,29 @@
+{
+  "name": "rinzler",
+  "version": "0.0.0",
+  "description": "remotely activated torrent scraper",
+  "main": "start.js",
+  "dependencies": {
+    "twilio": "^1.10.0",
+    "restler": "git://github.com/ginman86/restler"
+  },
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "mocha": "^2.1.0",
+    "sinon": "^1.12.2",
+    "sinon-chai": "^2.6.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ginman86/rinzler.git"
+  },
+  "author": "Greg Inman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ginman86/rinzler/issues"
+  },
+  "homepage": "https://github.com/ginman86/rinzler"
+}
