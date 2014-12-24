@@ -4,8 +4,10 @@
   "description": "remotely activated torrent scraper",
   "main": "start.js",
   "dependencies": {
-    "twilio": "^1.10.0",
-    "restler": "git://github.com/ginman86/restler"
+    "body-parser": "^1.10.0",
+    "express": "^4.10.6",
+    "restler": "git://github.com/ginman86/restler",
+    "twilio": "^1.10.0"
   },
   "devDependencies": {
     "chai": "^1.10.0",
