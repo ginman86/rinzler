@@ -1,4 +1,4 @@
 rinzler
 =======
 
-remotely activated torrent scraper
+remote utility for my pi
