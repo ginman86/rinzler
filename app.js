@@ -1,8 +1,13 @@
-var express = require('express');
-var bodyParser = require('body-parser');
+/** @jsx React.DOM */
 
-var app = express();
+var React = require('react');
+var Rinzler = require('./components/Rinzler.react');
 
-app.use(bodyParser.urlencoded());
+// Snag the initial state that was passed from the server side
+//var initialState = JSON.parse(document.getElementById('initial-state').innerHTML)
 
-app.listen(process.env.PORT || 3000);
+// Render the components, picking up where react left off on the server
+React.renderComponent(
+  <Rinzler />,
+  document.getElementById('react-app')
+);

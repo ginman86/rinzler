@@ -1,22 +1,13 @@
 {
   "name": "rinzler",
   "version": "0.0.0",
-  "description": "remotely activated torrent scraper",
-  "main": "start.js",
-  "dependencies": {
-    "body-parser": "^1.10.0",
-    "express": "^4.10.6",
-    "restler": "git://github.com/ginman86/restler",
-    "twilio": "^1.10.0"
-  },
-  "devDependencies": {
-    "chai": "^1.10.0",
-    "mocha": "^2.1.0",
-    "sinon": "^1.12.2",
-    "sinon-chai": "^2.6.0"
-  },
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "watch": "watchify app.js -o public/js/bundle.js -v",
+    "browserify": "browserify app.js | uglifyjs > public/js/bundle.js",
+    "build": "npm run browserify ",
+    "start": "npm run watch & nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -27,5 +18,23 @@
   "bugs": {
     "url": "https://github.com/ginman86/rinzler/issues"
   },
-  "homepage": "https://github.com/ginman86/rinzler"
+  "homepage": "https://github.com/ginman86/rinzler",
+  "dependencies": {
+    "express": "^4.10.8",
+    "express-handlebars": "^1.1.0",
+    "node-jsx": "^0.12.4",
+    "react": "^0.12.2"
+  },
+  "devDependencies": {
+    "browserify": "~6.0.3",
+    "nodemon": "^1.2.1",
+    "reactify": "~0.14.0",
+    "uglify-js": "~2.4.15",
+    "watchify": "~2.0.0"
+  },
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  }
 }
