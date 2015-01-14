@@ -25,8 +25,9 @@
     "express-handlebars": "^1.1.0",
     "node-jsx": "^0.12.4",
     "react": "^0.12.2",
-    "twilio": "^1.10.0",
-    "restler": "git://github.com/ginman86/restler"
+    "restler": "git://github.com/ginman86/restler",
+    "shelljs": "^0.3.0",
+    "twilio": "^1.10.0"
   },
   "devDependencies": {
     "browserify": "~6.0.3",
