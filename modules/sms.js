@@ -1,6 +1,6 @@
 // Twilio Credentials
 var accountSid = 'ACca9390943711d6c62d3040d325dc97b2';
-var authToken = '';
+var authToken = ''; //load from disk
 
 //require the Twilio module and create a REST client
 var twilio = require('twilio')(accountSid, authToken);
@@ -10,7 +10,7 @@ module.exports = function() {
     validate: function(data) {
       return true;
     },
-    receive: function(data) {
+    onDataReceived: function(data) {
       if (this.validate(data)) {
         return true;
       } else {
@@ -19,15 +19,15 @@ module.exports = function() {
     },
     sendTestMessage: function() {
       twilio.messages.create({
-        to: "618-541-8432",
+        to: "618-920-2288",
         from: "+16184778321",
-        body: "test found and is now downloading"
+        body: "casablanca found and is now downloading"
       }, function(err, message) {
         console.log(message.sid);
       });
 
       return true;
-    },
+    }
   }
 
   return sms;

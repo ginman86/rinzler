@@ -7,7 +7,8 @@
     "watch": "watchify app.js -o public/js/bundle.js -v",
     "browserify": "browserify app.js | uglifyjs > public/js/bundle.js",
     "build": "npm run browserify ",
-    "start": "npm run watch & nodemon server.js"
+    "start": "npm run watch & nodemon server.js",
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -23,14 +24,20 @@
     "express": "^4.10.8",
     "express-handlebars": "^1.1.0",
     "node-jsx": "^0.12.4",
-    "react": "^0.12.2"
+    "react": "^0.12.2",
+    "twilio": "^1.10.0",
+    "restler": "git://github.com/ginman86/restler"
   },
   "devDependencies": {
     "browserify": "~6.0.3",
     "nodemon": "^1.2.1",
     "reactify": "~0.14.0",
     "uglify-js": "~2.4.15",
-    "watchify": "~2.0.0"
+    "watchify": "~2.0.0",
+    "chai": "^1.10.0",
+    "mocha": "^2.1.0",
+    "sinon": "^1.12.2",
+    "sinon-chai": "^2.6.0"
   },
   "browserify": {
     "transform": [
