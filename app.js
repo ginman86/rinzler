@@ -1,7 +1,6 @@
 var express = require('express'),
     exphbs  = require('express-handlebars'),
-    routes  = require('./routes'),
-    shell   = require('./modules/shell');
+    routes  = require('./routes');
 
 // Create an express instance
 var app = express();

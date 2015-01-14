@@ -1,7 +1,16 @@
 require('shelljs/global');
 
-console.log("Running");
+module.exports = {
+  deluged: function() {
+    console.log("Running deluged ", exec("deluged"));
+  },
+  gitStatus: function() {
+    var output;
+    console.log("Running git status ");
 
-console.log("PWD: " + pwd());
+    output = exec("git status").output;
+    output = output.split('\n').join('<br/>');
 
-exec("git status");
+    return output;
+  }
+}

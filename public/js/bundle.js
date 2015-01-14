@@ -2,8 +2,7 @@
 (function (__dirname){
 var express = require('express'),
     exphbs  = require('express-handlebars'),
-    routes  = require('./routes'),
-    shell   = require('./modules/shell');
+    routes  = require('./routes');
 
 // Create an express instance
 var app = express();
@@ -23,7 +22,7 @@ app.use("/", express.static(__dirname + "/public/"));
 
 module.exports = app;
 }).call(this,"/")
-},{"./modules/shell":"/Users/greg/Development/personal/rinzler/modules/shell.js","./routes":"/Users/greg/Development/personal/rinzler/routes.js","express":"/Users/greg/Development/personal/rinzler/node_modules/express/index.js","express-handlebars":"/Users/greg/Development/personal/rinzler/node_modules/express-handlebars/index.js"}],"/Users/greg/Development/personal/rinzler/components/Rinzler.react.js":[function(require,module,exports){
+},{"./routes":"/Users/greg/Development/personal/rinzler/routes.js","express":"/Users/greg/Development/personal/rinzler/node_modules/express/index.js","express-handlebars":"/Users/greg/Development/personal/rinzler/node_modules/express-handlebars/index.js"}],"/Users/greg/Development/personal/rinzler/components/Rinzler.react.js":[function(require,module,exports){
 /** @jsx React.DOM */
 
 var React = require("react");
@@ -48,11 +47,20 @@ module.exports = React.createClass({displayName: 'exports',
 },{"react":"/Users/greg/Development/personal/rinzler/node_modules/react/react.js"}],"/Users/greg/Development/personal/rinzler/modules/shell.js":[function(require,module,exports){
 require('shelljs/global');
 
-console.log("Running");
+module.exports = {
+  deluged: function() {
+    console.log("Running deluged ", exec("deluged"));
+  },
+  gitStatus: function() {
+    var output;
+    console.log("Running git status ");
 
-console.log("PWD: " + pwd());
+    output = exec("git status").output;
+    output = output.split('\n').join('<br/>');
 
-exec("git status");
+    return output;
+  }
+}
 },{"shelljs/global":"/Users/greg/Development/personal/rinzler/node_modules/shelljs/global.js"}],"/Users/greg/Development/personal/rinzler/node_modules/express-handlebars/index.js":[function(require,module,exports){
 'use strict';
 
@@ -11758,7 +11766,7 @@ exports.contentType = function (type) {
 }
 
 },{"mime-db":"/Users/greg/Development/personal/rinzler/node_modules/express/node_modules/accepts/node_modules/mime-types/node_modules/mime-db/index.js"}],"/Users/greg/Development/personal/rinzler/node_modules/express/node_modules/accepts/node_modules/mime-types/node_modules/mime-db/db.json":[function(require,module,exports){
-module.exports=module.exports=module.exports=module.exports=module.exports=module.exports={
+module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports={
   "application/1d-interleaved-parityfec": {
     "source": "iana"
   },
@@ -59641,7 +59649,7 @@ module.exports = isArray || function (val) {
 };
 
 },{}],"/Users/greg/Development/personal/rinzler/node_modules/watchify/node_modules/browserify/node_modules/constants-browserify/constants.json":[function(require,module,exports){
-module.exports=module.exports=module.exports=module.exports=module.exports={
+module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports={
   "O_RDONLY": 0,
   "O_WRONLY": 1,
   "O_RDWR": 2,
@@ -68025,7 +68033,7 @@ function shr64_lo(ah, al, num) {
 exports.shr64_lo = shr64_lo;
 
 },{"inherits":"/Users/greg/Development/personal/rinzler/node_modules/watchify/node_modules/browserify/node_modules/inherits/inherits_browser.js"}],"/Users/greg/Development/personal/rinzler/node_modules/watchify/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/package.json":[function(require,module,exports){
-module.exports=module.exports=module.exports=module.exports=module.exports=module.exports={
+module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports={
   "name": "elliptic",
   "version": "1.0.1",
   "description": "EC cryptography",
@@ -68130,7 +68138,7 @@ module.exports = function evp(crypto, password, salt, keyLen) {
 };
 }).call(this,require("buffer").Buffer)
 },{"buffer":"/Users/greg/Development/personal/rinzler/node_modules/watchify/node_modules/browserify/node_modules/buffer/index.js"}],"/Users/greg/Development/personal/rinzler/node_modules/watchify/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/aesid.json":[function(require,module,exports){
-module.exports=module.exports=module.exports=module.exports=module.exports=module.exports={"2.16.840.1.101.3.4.1.1": "aes-128-ecb",
+module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports={"2.16.840.1.101.3.4.1.1": "aes-128-ecb",
 "2.16.840.1.101.3.4.1.2": "aes-128-cbc",
 "2.16.840.1.101.3.4.1.3": "aes-128-ofb",
 "2.16.840.1.101.3.4.1.4": "aes-128-cfb",
@@ -70936,7 +70944,7 @@ MillerRabin.prototype.getDivisor = function getDivisor(n, k) {
 },{"bn.js":"/Users/greg/Development/personal/rinzler/node_modules/watchify/node_modules/browserify/node_modules/crypto-browserify/node_modules/diffie-hellman/node_modules/bn.js/lib/bn.js","brorand":"/Users/greg/Development/personal/rinzler/node_modules/watchify/node_modules/browserify/node_modules/crypto-browserify/node_modules/diffie-hellman/node_modules/miller-rabin/node_modules/brorand/index.js"}],"/Users/greg/Development/personal/rinzler/node_modules/watchify/node_modules/browserify/node_modules/crypto-browserify/node_modules/diffie-hellman/node_modules/miller-rabin/node_modules/brorand/index.js":[function(require,module,exports){
 module.exports=require("/Users/greg/Development/personal/rinzler/node_modules/watchify/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/node_modules/brorand/index.js")
 },{"/Users/greg/Development/personal/rinzler/node_modules/watchify/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/node_modules/brorand/index.js":"/Users/greg/Development/personal/rinzler/node_modules/watchify/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/node_modules/brorand/index.js"}],"/Users/greg/Development/personal/rinzler/node_modules/watchify/node_modules/browserify/node_modules/crypto-browserify/node_modules/diffie-hellman/primes.json":[function(require,module,exports){
-module.exports=module.exports=module.exports=module.exports=module.exports={
+module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports=module.exports={
     "modp1": {
         "gen": "02",
         "prime": "ffffffffffffffffc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c245e485b576625e7ec6f44c42e9a63a3620ffffffffffffffff"
@@ -77810,7 +77818,8 @@ module.exports = function(arr, obj){
 },{}],"/Users/greg/Development/personal/rinzler/routes.js":[function(require,module,exports){
 var JSX   = require('node-jsx').install(),
   React   = require('react'),
-  Rinzler = require('./components/Rinzler.react');
+  Rinzler = require('./components/Rinzler.react'),
+  shell   = require('./modules/shell');
 
 module.exports = {
   index: function(req, res) {
@@ -77819,11 +77828,13 @@ module.exports = {
       Rinzler()
     );
 
+    var shellExample = shell.gitStatus();
+
     // Render our 'home' template
     res.render('home', {
       markup: markup, // Pass rendered react markup
-      state: {test: true}
+      shell: shellExample
     });
   }
 };
-},{"./components/Rinzler.react":"/Users/greg/Development/personal/rinzler/components/Rinzler.react.js","node-jsx":"/Users/greg/Development/personal/rinzler/node_modules/node-jsx/index.js","react":"/Users/greg/Development/personal/rinzler/node_modules/react/react.js"}]},{},["/Users/greg/Development/personal/rinzler/app.js"]);
+},{"./components/Rinzler.react":"/Users/greg/Development/personal/rinzler/components/Rinzler.react.js","./modules/shell":"/Users/greg/Development/personal/rinzler/modules/shell.js","node-jsx":"/Users/greg/Development/personal/rinzler/node_modules/node-jsx/index.js","react":"/Users/greg/Development/personal/rinzler/node_modules/react/react.js"}]},{},["/Users/greg/Development/personal/rinzler/app.js"]);
