@@ -10,7 +10,7 @@ describe('The sms module suite', function() {
   it('should validate an incoming text', function(done) {
     var spy = sinon.spy(sms, 'validate');
 
-    sms.onDataReceived(STUB_TEXT_MSG);
+    sms.receive(STUB_TEXT_MSG);
 
     assert(spy.called);
     done();

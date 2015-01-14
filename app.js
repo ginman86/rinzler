@@ -1,13 +1,21 @@
-/** @jsx React.DOM */
+var express = require('express'),
+    exphbs  = require('express-handlebars'),
+    routes  = require('./routes');
 
-var React = require('react');
-var Rinzler = require('./components/Rinzler.react');
+// Create an express instance
+var app = express();
 
-// Snag the initial state that was passed from the server side
-//var initialState = JSON.parse(document.getElementById('initial-state').innerHTML)
+// Set handlebars as the templating engine
+app.engine('handlebars', exphbs({ defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
 
-// Render the components, picking up where react left off on the server
-React.renderComponent(
-  <Rinzler />,
-  document.getElementById('react-app')
-);
+// Disable etag headers on responses
+app.disable('etag');
+
+// Index Route
+app.get('/', routes.index);
+
+// Set /public as our static content dir
+app.use("/", express.static(__dirname + "/public/"));
+
+module.exports = app;

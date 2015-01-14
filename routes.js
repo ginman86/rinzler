@@ -1,6 +1,7 @@
 var JSX   = require('node-jsx').install(),
   React   = require('react'),
-  Rinzler = require('./components/Rinzler.react');
+  Rinzler = require('./components/Rinzler.react'),
+  shell   = require('./modules/shell');
 
 module.exports = {
   index: function(req, res) {
@@ -9,10 +10,12 @@ module.exports = {
       Rinzler()
     );
 
+    var shellExample = shell.gitStatus();
+
     // Render our 'home' template
     res.render('home', {
       markup: markup, // Pass rendered react markup
-      state: {test: true}
+      shell: shellExample
     });
   }
 };
