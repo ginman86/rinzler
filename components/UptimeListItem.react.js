@@ -1,7 +1,6 @@
 /** @jsx React.DOM */
 
-var React = require("react");
-var Uptime = require("./Uptime.react");
+var React = require("react/addons");
 
 module.exports = React.createClass({
   getInitialState: function(props) {
@@ -9,19 +8,15 @@ module.exports = React.createClass({
     props = props || this.props;
 
     return {
-      uptimePs: "sublime"
+      test: true
     };
-  },
-  setUptimePs: function() {
-    this.setState({uptimePs: "sublime"});
   },
   render: function() {
     return (
     <div>
-      <h1> Rinzler is back. </h1>
-
-
-      <Uptime ps="libexec"></Uptime>
+      {this.props.pid} |
+      {this.props.time} |
+      {this.props.description} <br/>
     </div>
     );
   }

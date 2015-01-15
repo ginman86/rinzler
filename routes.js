@@ -1,7 +1,7 @@
 var JSX   = require('node-jsx').install(),
   React   = require('react'),
-  Rinzler = require('./components/Rinzler.react'),
-  shell   = require('./modules/shell');
+  Rinzler = require('./components/Rinzler.react');
+  //shell   = require('./modules/shell');
 
 module.exports = {
   index: function(req, res) {
@@ -10,12 +10,13 @@ module.exports = {
       Rinzler()
     );
 
-    var shellExample = shell.gitStatus();
+    //var shellExample = shell.getUptime("libexec");
+
 
     // Render our 'home' template
     res.render('home', {
       markup: markup, // Pass rendered react markup
-      shell: shellExample
+      shell: ""
     });
   }
 };
