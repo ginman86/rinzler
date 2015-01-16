@@ -32,8 +32,16 @@ module.exports = React.createClass({
       );
     });
     return (
-    <div>
-      <h2>{listItemNodes}</h2>
+    <div className="uptime-container">
+      <div className="">
+        <div className="cell">executing...</div>
+      </div>
+      <div className="">
+        <div className="cell">pid</div>
+        <div className="cell">uptime</div>
+        <div className="cell">desc</div>
+      </div>
+      {listItemNodes}
     </div>
     );
   }

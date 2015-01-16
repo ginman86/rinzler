@@ -4,6 +4,6 @@ module.exports = {
       '.tmp/css/{,*/}*.css',
       '.tmp/css/components/{,*/}*.css',
     ],
-    dest: 'public/css/rinzler-app.css'
+    dest: 'public/css/rinzler.css'
   }
 };

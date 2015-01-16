@@ -13,10 +13,10 @@ module.exports = React.createClass({
   },
   render: function() {
     return (
-    <div>
-      {this.props.pid} |
-      {this.props.time} |
-      {this.props.description} <br/>
+    <div class="row">
+      <div className="cell">{this.props.pid}</div>
+      <div className="cell">{this.props.time}</div>
+      <div className="cell">{this.props.description}</div>
     </div>
     );
   }

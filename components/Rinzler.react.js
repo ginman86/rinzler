@@ -17,8 +17,8 @@ module.exports = React.createClass({
   },
   render: function() {
     return (
-    <div>
-      <h1> Rinzler is back. </h1>
+    <div className="rinzler-app">
+      <h1 className="header"> rinzler </h1>
 
 
       <Uptime ps="libexec"></Uptime>
