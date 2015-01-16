@@ -1,0 +1,107 @@
+//Scaffolding and Breakpoints
+//==========================================================================
+
+// ** Breakpoints **
+$mobile:                        0px;
+$phablet:                       768px;
+$tablet:                        900px;
+$desktop-small:                 1040px;
+$desktop:                       1360px;
+$large-desktop:                 1400px;
+
+// Colors
+// ==========================================================================
+
+$white:                         #fff;
+$black:                         #000;
+$light-gray:                    #f1f1f1;
+$teal:                          #32c1cd;
+$orange:                        #f37225;
+$purple:                        #6f66ae;
+$pink:                          #e86db2;
+$red:                           #eb0000;
+
+$color-primary:                 $teal;
+$color-primary-dark:            darken($color-primary, 10%);
+$color-primary-darker:          darken($color-primary, 20%);
+
+$color-secondary:               $orange;
+$color-secondary-dark:          darken($color-secondary, 10%);
+$color-secondary-darker:        darken($color-secondary, 20%);
+
+$color-alt:                     $purple;
+$color-alt-dark:                darken($color-alt, 10%);
+$color-alt-darker:              darken($color-alt ,20%);
+
+$opacity:                        0.75;
+
+
+
+//Type
+//==========================================================================
+
+$text-color:                    $black;
+$link-color:                    $color-alt;
+
+$primary-font-family:           'Roboto', sans-serif;
+
+$primary-font-weight-light:     300;
+$primary-font-weight-normal:    500;
+$primary-font-weight-bold:      700;
+
+//** Base font
+$base-font-family:              $primary-font-family;
+$base-font-weight:              $primary-font-weight-normal;
+$base-font-weight-light:        $primary-font-weight-light;
+$base-font-weight-bold:         $primary-font-weight-bold;
+$base-font-color:               $text-color;
+$base-font-size-mobile:         16px;
+$base-font-size:        18px;
+$base-line-height-desktop:      28px;
+$base-line-height-mobile:       24px;
+
+//** headings
+$heading-font-family:           $base-font-family;
+$heading-font-weight:           $primary-font-weight-bold;
+
+//** sizes
+$heading1-font-size:            72px;
+$heading1-page-title:     48px;
+$heading2-font-size:            36px;
+$heading3-font-size:            28px;
+$heading4-font-size:            24px;
+$heading5-font-size:      18px;
+
+
+$heading1-font-size-tablet:            56px;
+$heading1-page-title-tablet:       42px;
+$heading2-font-size-tablet:            36px;
+$heading3-font-size-tablet:            28px;
+$heading4-font-size-tablet:            24px;
+$heading5-font-size-tablet:            18px;
+
+
+$heading1-font-size-mobile:            36px;
+$heading1-page-title-mobile:       32px;
+$heading2-font-size-mobile:            28px;
+$heading3-font-size-mobile:            21px;
+$heading4-font-size-mobile:            18px;
+$heading5-font-size-mobile:            16px;
+
+//** Odd Sizes
+$body-font-size-odd-small:           21px;
+
+//** line height
+$heading1-font-line:           80px;
+$page-title-line-height:         56px;
+$heading2-font-line:           42px;
+$heading3-font-line:           36px;
+$heading4-font-line:           32px;
+$heading5-font-line:           28px;
+
+$heading1-font-line-mobile:            42px;
+$page-title-line-height-mobile:      40px;
+$heading2-font-line-mobile:            36px;
+$heading3-font-line-mobile:            28px;
+$heading4-font-line-mobile:            26px;
+$heading5-font-line-mobile:            24px;
