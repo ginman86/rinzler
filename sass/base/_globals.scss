@@ -1,0 +1,173 @@
+// _globals contains rules that are global to the site. Things like box-sizing type,
+// html font size, body background color, headings and link defaults, etc. are defined here.
+// It is also be a good place to store your layout definition if it is used for all pages
+// on the site.
+
+
+body, html {
+}
+
+body {
+ color: $white;
+ font-family: $primary-font-family;
+ line-height: 1.6em;
+ font-size: 18px;
+ min-width: 320px;
+ height: 100%;
+ margin: 0px;
+ padding: 0px;
+ -webkit-font-smoothing: subpixel-antialiased;
+
+@media screen and (min-width: $desktop) {
+  height: 100%;
+  display: block;
+  width: 100%;
+  z-index: -1;
+    -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+ }
+}
+
+
+//Type
+//==========================================================================
+
+//  h1, h2, h3, h4 {
+//   font-weight: $base-font-weight-bold;
+//  }
+
+//  h1 {
+//   font-size: $heading1-font-size-mobile;
+//   margin: $heading1-font-margin;
+//   line-height: $heading1-font-line-mobile;
+//  }
+
+//  h2 {
+//   font-size: $heading2-font-size-mobile;
+//   margin: $heading2-font-margin;
+//   line-height: $heading2-font-line-mobile;
+//  }
+
+//  h3 {
+//   font-size: $heading3-font-size-mobile;
+//   margin: $heading3-font-margin;
+//   line-height: $heading3-font-line-mobile;
+//  }
+
+//  h4 {
+//   font-size: $heading4-font-size-mobile;
+//   margin: $heading4-font-margin;
+//   line-height: $heading4-font-line-mobile;
+//  }
+
+//  h5 {
+//   font-size: $heading5-font-size-mobile;
+//   margin: $heading5-font-margin;
+//   line-height: $heading5-font-line-mobile;
+//  }
+
+//  p {
+//   font-weight: $base-font-weight-light;
+//   margin-bottom: 10px;
+//   line-height: $base-line-height-mobile;
+//  }
+
+//  small {
+//   font-size: 12px;
+//  }
+//   .fine-print{
+//    font-size:14px;
+//   }
+
+
+//  @include breakpoint($tablet) {
+
+//   h1, h2, h3, h4 {
+//   font-weight: $base-font-weight-bold;
+//  }
+
+//  h1 {
+//   font-size: $heading1-font-size-tablet;
+//   margin: $heading1-font-margin;
+//   line-height: $heading1-font-line;
+//  }
+
+//  h2 {
+//   font-size: $heading2-font-size-tablet;
+//   margin: $heading2-font-margin;
+//   line-height: $heading2-font-line;
+//  }
+
+//  h3 {
+//   font-size: $heading3-font-size-tablet;
+//   margin: $heading3-font-margin;
+//   line-height: $heading3-font-line;
+//  }
+
+//  h4 {
+//   font-size: $heading4-font-size-tablet;
+//   margin: $heading4-font-margin;
+//   line-height: $heading4-font-line;
+//  }
+
+//  h5 {
+//   font-size: $heading5-font-size-tablet;
+//   margin: $heading5-font-margin;
+//   line-height: $heading5-font-line;
+//  }s
+
+//  p {
+//   font-weight: $base-font-weight-light;
+//   margin-bottom: 10px;
+//  }
+
+
+
+// }
+
+// @include breakpoint($desktop) {
+//  h1, h2, h3, h4 {
+//   font-weight: $base-font-weight-bold;
+//  }
+
+//  h1 {
+//   font-size: $heading1-font-size;
+//   margin: $heading1-font-margin;
+//   line-height: $heading1-font-line;
+//  }
+
+//  h2 {
+//   font-size: $heading2-font-size;
+//   margin: $heading2-font-margin;
+//   line-height: $heading2-font-line;
+//  }
+
+//  h3 {
+//   font-size: $heading3-font-size;
+//   margin: $heading3-font-margin;
+//   line-height: $heading3-font-line;
+//  }
+
+//  h4 {
+//   font-size: $heading4-font-size;
+//   margin: $heading4-font-margin;
+//   line-height: $heading4-font-line;
+//  }
+
+//  h5 {
+//   font-size: $heading5-font-size;
+//   margin: $heading5-font-margin;
+//   line-height: $heading5-font-line;
+//  }
+
+//  p {
+//   font-size: $base-font-size;
+//   font-weight: $base-font-weight-light;
+//   margin-bottom: 10px;
+//   line-height: $base-line-height-desktop;
+//  }
+
+//  }
+
+

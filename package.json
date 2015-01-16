@@ -31,6 +31,18 @@
     "twilio": "^1.10.0"
   },
   "devDependencies": {
+    "glob": "4.0.5",
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^3.2.1",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-clean": "0.6.0",
+    "grunt-contrib-compass": "1.0.1",
+    "grunt-contrib-concat": "0.5.0",
+    "grunt-contrib-copy": "0.5.0",
+    "grunt-contrib-uglify": "0.5.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "load-grunt-tasks": "0.6.0",
+    "time-grunt": "1.0.0",
     "browserify": "~6.0.3",
     "nodemon": "^1.2.1",
     "reactify": "~0.14.0",
