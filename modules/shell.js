@@ -27,8 +27,6 @@ module.exports = {
       str = str.trim();
       str = str.split(" ");
 
-      console.log("str", str)
-
       process = {
         pid: str[0],
         uptime: str[3],
