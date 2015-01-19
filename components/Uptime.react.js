@@ -34,12 +34,12 @@ module.exports = React.createClass({
     return (
     <div className="uptime-container">
       <div className="">
-        <div className="cell">executing...</div>
+        executing...
       </div>
       <div className="">
-        <div className="cell">pid</div>
-        <div className="cell">uptime</div>
-        <div className="cell">desc</div>
+        pid
+        uptime
+        desc
       </div>
       {listItemNodes}
     </div>

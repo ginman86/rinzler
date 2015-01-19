@@ -2,6 +2,7 @@
 
 var React = require("react");
 var Uptime = require("./Uptime.react");
+var Console = require("./Console.react");
 
 module.exports = React.createClass({
   getInitialState: function(props) {
@@ -21,7 +22,7 @@ module.exports = React.createClass({
       <h1 className="header"> rinzler </h1>
 
 
-      <Uptime ps="libexec"></Uptime>
+      <Console />
     </div>
     );
   }
