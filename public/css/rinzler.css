@@ -1,0 +1,55 @@
+/* line 1, ../../../sass/components/Console.scss */
+.console {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/* line 2, ../../../sass/components/Rinzler.scss */
+.rinzler-app .header {
+  text-align: center;
+}
+
+/* line 1, ../../../sass/components/Uptime.scss */
+.uptime-container {
+  padding-right: 15px;
+  padding: 1em;
+  -moz-column-count: 3;
+  -moz-column-gap: 1em;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 1em;
+  column-count: 3;
+  column-gap: 1em;
+}
+
+
+/* line 112, ../../sass/base/_scaffolding.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 10, ../../sass/base/_globals.scss */
+body {
+  color: #5a6170;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6em;
+  font-size: 12px;
+  min-width: 320px;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+@media screen and (min-width: 1360px) {
+  /* line 10, ../../sass/base/_globals.scss */
+  body {
+    height: 100%;
+    display: block;
+    width: 100%;
+    z-index: -1;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+}
