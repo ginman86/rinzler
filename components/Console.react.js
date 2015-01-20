@@ -2,6 +2,7 @@
 
 var React           = require("react");
 var ConsoleLine     = require("./ConsoleLine.react");
+var ConsoleInput    = require("./ConsoleInput.react");
 
 var shell           = require("../modules/shell");
 
@@ -34,6 +35,9 @@ module.exports = React.createClass({
         <pre>
           {listItemNodes}
         </pre>
+        <div>
+          <ConsoleInput />
+        </div>
       </div>
     );
   }
