@@ -1,6 +1,6 @@
 .console {
   position:relative;
-  height:100%;
+  height:90%;
   border-collapse:collapse;
 
   max-width:800px;
@@ -10,8 +10,12 @@
 
 
   .console-input-container {
-    position: absolute;
+    position: fixed;
     bottom: 0px;
+    background: #FFFFFF;
+    height: 30px;
+
+    width: 100%;
 
     .console-input {
       box-shadow: none;
