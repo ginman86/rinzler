@@ -1,17 +1,25 @@
 .console {
-  position:relative;
-  height:100%;
-  border-collapse:collapse;
+    position:relative;
+    height:90%;
+    border-collapse:collapse;
 
-  max-width:800px;
-  margin: 0 auto;
-  overflow: scroll;
-  padding-bottom: 50px;
-
+    max-width:800px;
+    margin: 0 auto;
+    overflow: scroll;
+    padding-bottom: 50px;
+  .content {
+    position: fixed;
+    bottom:30px;
+    overflow: scroll;
+  }
 
   .console-input-container {
-    position: absolute;
+    position: fixed;
     bottom: 0px;
+    background: #FFFFFF;
+    height: 30px;
+
+    width: 100%;
 
     .console-input {
       box-shadow: none;
