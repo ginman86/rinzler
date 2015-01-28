@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "watchify app.js -o public/js/bundle.js -v",
+    "watch": "watchify app.js -o public/js/bundle.js -v public/css/rinzler.css -v",
     "browserify": "browserify app.js | uglifyjs > public/js/bundle.js",
     "build": "npm run browserify ",
-    "start": "npm run watch & nodemon server.js",
+    "start": "grunt build & npm run watch & nodemon server.js",
     "test": "mocha"
   },
   "repository": {
@@ -28,7 +28,8 @@
     "react": "^0.12.2",
     "restler": "git://github.com/ginman86/restler",
     "shelljs": "^0.3.0",
-    "twilio": "^1.10.0"
+    "twilio": "^1.10.0",
+    "xml2js": "^0.4.4"
   },
   "devDependencies": {
     "glob": "4.0.5",
