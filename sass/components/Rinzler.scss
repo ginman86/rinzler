@@ -1,5 +1,12 @@
 .rinzler-app {
   .header {
-    text-align:center;
+    background: #FFFFFF;
+    width:100%;
+    height: 40px;
+    position: fixed;
+
+    .text {
+      text-align:center;
+    }
   }
 }

@@ -19,8 +19,9 @@ module.exports = React.createClass({
   render: function() {
     return (
     <div className="rinzler-app">
-      <h1 className="header"> rinzler </h1>
-
+      <div className="header">
+        <h1 className="text"> rinzler </h1>
+      </div>20
 
       <Console />
     </div>

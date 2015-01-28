@@ -32,9 +32,11 @@ module.exports = React.createClass({
 
     return (
       <div className={classes}>
-        <pre>
-          {listItemNodes}
-        </pre>
+        <div className="content">
+          <pre>
+            {listItemNodes}
+          </pre>
+        </div>
         <div>
           <ConsoleInput />
         </div>
