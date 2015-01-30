@@ -27,6 +27,7 @@
     "node-jsx": "^0.12.4",
     "react": "^0.12.2",
     "restler": "git://github.com/ginman86/restler",
+    "deluge-add": "git://github.com/ginman86/deluge-add.git",
     "shelljs": "^0.3.0",
     "twilio": "^1.10.0",
     "xml2js": "^0.4.4"
