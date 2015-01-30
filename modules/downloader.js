@@ -1,4 +1,5 @@
 var config = require('../config/config');
+var client = require('./client');
 
 var downloadClient;
 
@@ -38,14 +39,13 @@ var Downloader = {
     }
   },
   search: function(keyword, category, callback) {
-    console.log(downloadClient)
-
     downloadClient.search(keyword, category, callback);
   },
   download: function(magnet, err, callback) {
-    console.log("ima downloadin");
-    callback();
-    //deluge-add
+    if (!err) {
+      console.log("ima downloadin");
+      client.add(magnet, callback)
+    }
   }
 }
 

@@ -1,4 +1,4 @@
-var config = require('../config/');
+var config = require('../config/config');
 var client = require('./clients/' + config.activeClient);
 
 var Client = {

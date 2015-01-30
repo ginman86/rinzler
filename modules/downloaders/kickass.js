@@ -1,5 +1,6 @@
 var parseString = require('xml2js').parseString;
 var restler     = require('restler');
+var config      = require('../../config/config');
 
 var categories = {
   movies: "movies",
@@ -8,7 +9,7 @@ var categories = {
 
 var Kickass = {
   search: function(keyword, category, callback) {
-    var prefix = "https://kickass.so/search/",
+    var prefix = config.downloaders.kickass.prefix,
         categoryPrefix = "",
         searchTerm = "",
         suffix = "/?field=seeders&sorder=desc&rss=1",
@@ -25,7 +26,12 @@ var Kickass = {
 
       restler.get(requestURI).on("complete", function(result) {
         var results = parseString(result, function(err, parsed) {
-          console.log("LETS TEST THE RSULT", parsed.rss.channel[0].item[0]);
+          if (!err) {
+            console.log("LETS TEST THE RSULT", parsed.rss.channel[0].item[0]);
+          } else {
+            console.log("ERR", err);
+          }
+
         });
 
         callback("sommat");

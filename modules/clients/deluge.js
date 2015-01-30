@@ -1,13 +1,23 @@
-var deluge_add = require('deluge-add'),
+var delugeAdd = require('deluge-add'),
     config = require('../../config/config'),
-    credentials = require('../../config/credentials'),
-    deluge_url =  config.clients.deluge.url, //'http://yourhost.com/json',
-    download_location = config.clients.deluge.downloadLocation, //'/path/on/deluge/server',
-    password = credentials.clients.deluge.password;
+    delugeUrl =  config.clients.deluge.url, //'http://yourhost.com/json',
+    downloadLocation = config.clients.deluge.downloadLocation; //'/path/on/deluge/server',
+
+var credentials,
+    password;
+
+try {
+  credentials = require('../../config/credentials'),
+  password = credentials.clients.deluge.password;
+} catch (e) {
+  console.warn("Error loading the credentials file");
+}
+
 
 var Deluge = {
   add: function(magnet, callback) {
-    deluge_add(deluge_url, password, magnet, download_location, callback);
+    console.log(delugeUrl, downloadLocation, password);
+    delugeAdd(delugeUrl, password, magnet, downloadLocation, callback);
   }
 };
 

@@ -3,6 +3,7 @@ var config = {
   downloaders: {
     kickass: {
       enabled: true,
+      prefix: "https://kickass.so/search/"
     },
     tbp: {
       enabled:false
