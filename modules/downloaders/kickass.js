@@ -12,7 +12,7 @@ var Kickass = {
     var prefix = config.downloaders.kickass.prefix,
         categoryPrefix = "",
         searchTerm = "",
-        suffix = "/?field=seeders&sorder=desc&rss=1",
+        suffix = config.downloaders.kickass.suffix,
         requestURI = "";
 
     if (keyword) {

@@ -2,11 +2,14 @@
 var config = {
   downloaders: {
     kickass: {
-      enabled: true,
-      prefix: "https://kickass.so/search/"
+      enabled: false,
+      prefix: "https://kickass.so/search/",
+      suffix: "/?field=seeders&sorder=desc&rss=1"
     },
-    tbp: {
-      enabled:false
+    bay: {
+      enabled: true,
+      prefix: "http://thepiratebay.se/search/",
+      suffix: "/0/7/0" //sort by seeders desc
     }
   },
   activeClient: "deluge",
