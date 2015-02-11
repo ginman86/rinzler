@@ -8,7 +8,7 @@ var CATEGORIES = {
   TV: "tv"
 };
 
-var Downloader = {
+var DownloadManager = {
   init: function() {
     var count = 0;
 
@@ -44,11 +44,11 @@ var Downloader = {
   download: function(magnet, err, callback) {
     if (!err) {
       console.log("ima downloadin");
-      client.add(magnet, callback)
+      client.add(magnet, callback);
     }
   }
 }
 
-Downloader.init();
+DownloadManager.init();
 
-module.exports = Downloader;
+module.exports = DownloadManager;

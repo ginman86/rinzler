@@ -12,6 +12,9 @@ var config = {
       suffix: "/0/7/0" //sort by seeders desc
     }
   },
+  twilio: {
+    accountSid: "ACca9390943711d6c62d3040d325dc97b2"
+  },
   activeClient: "deluge",
   clients: {
     deluge: {

@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/ginman86/rinzler",
   "dependencies": {
+    "body-parser": "^1.11.0",
     "cheerio": "^0.18.0",
     "deluge-add": "git://github.com/ginman86/deluge-add.git",
     "express": "^4.10.8",

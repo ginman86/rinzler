@@ -6,11 +6,11 @@ var proxyquire  = require('proxyquire')
 
 var kickass     = require('../modules/downloaders/kickass');
 
-var downloader = proxyquire('../modules/downloader', {
+var downloadManager = proxyquire('../modules/downloadManager', {
   './client': {
     add: function(a,b) {
       console.log("PROXYQUIRE", a,b);
-      b();
+      b({success: true});
       return true;
     }
   }
@@ -19,8 +19,8 @@ var downloader = proxyquire('../modules/downloader', {
 describe('The downloader suite', function() {
   it('should be able to execute a callback passed to find and download.', function(done) {
     this.timeout(5000);
-    downloader.findAndDownload("gone girl", "movies", function() {
-      assert(true);
+    downloadManager.findAndDownload("gone girl", "movies", function(result) {
+      assert(result.success);
       done();
     });
   });

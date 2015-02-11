@@ -1,7 +1,6 @@
 var JSX   = require('node-jsx').install(),
   React   = require('react'),
   Rinzler = require('./components/Rinzler.react');
-  //shell   = require('./modules/shell');
 
 module.exports = {
   index: function(req, res) {
