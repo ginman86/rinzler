@@ -35,7 +35,7 @@ var sms = {
   },
   sendTestMessage: function() {
     twilio.messages.create({
-      to: "618-541-8432",
+      to: "",
       from: "+16184778321",
       body: "test found and is now downloading"
     }, function(err, message) {
