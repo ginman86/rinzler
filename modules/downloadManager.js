@@ -1,4 +1,5 @@
 var config = require('../config/config');
+var client = require('./client');
 
 var downloadClient;
 
@@ -7,7 +8,7 @@ var CATEGORIES = {
   TV: "tv"
 };
 
-var Downloader = {
+var DownloadManager = {
   init: function() {
     var count = 0;
 
@@ -38,17 +39,15 @@ var Downloader = {
     }
   },
   search: function(keyword, category, callback) {
-    console.log(downloadClient)
-
     downloadClient.search(keyword, category, callback);
   },
   download: function(magnet, err, callback) {
-    console.log("ima downloadin");
-    callback();
-    //deluge-add
+    if (!err) {
+      client.add(magnet, callback);
+    }
   }
 }
 
-Downloader.init();
+DownloadManager.init();
 
-module.exports = Downloader;
+module.exports = DownloadManager;
