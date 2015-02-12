@@ -22,7 +22,7 @@ module.exports = React.createClass({
       'console': true
     });
 
-    var consoleOutput = shell.getUptime("libexec");
+    var consoleOutput = []; //shell.getUptime("libexec");
 
     var listItemNodes = consoleOutput.map(function(item) {
       return(

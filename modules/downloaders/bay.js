@@ -20,11 +20,11 @@ var Bay = {
 
         try {
           magnet = $('.detName')[0].next.next.attribs.href; //ugly fugly
+          console.log("Magnet found for ", searchTerm);
         } catch (e) {
           console.error("Problems grabbing magnet from search, " +
                         "page structure may have changed - ", e);
         }
-
         callback(magnet);
       });
     }

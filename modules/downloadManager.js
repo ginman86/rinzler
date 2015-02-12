@@ -43,7 +43,6 @@ var DownloadManager = {
   },
   download: function(magnet, err, callback) {
     if (!err) {
-      console.log("ima downloadin");
       client.add(magnet, callback);
     }
   }
