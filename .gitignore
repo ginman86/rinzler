@@ -30,6 +30,6 @@ node_modules
 *.sass-cache/*
 *.tmp/*
 
-public/*
+public/
 
 config/credentials.js
