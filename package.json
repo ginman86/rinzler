@@ -23,7 +23,7 @@
   "dependencies": {
     "body-parser": "^1.11.0",
     "cheerio": "^0.18.0",
-    "deluge-add": "git://github.com/ginman86/deluge-add.git",
+    "deluge": "^1.5.1",
     "express": "^4.10.8",
     "express-handlebars": "^1.1.0",
     "lodash": "^2.4.1",
@@ -31,6 +31,7 @@
     "react": "^0.12.2",
     "restler": "git://github.com/ginman86/restler",
     "shelljs": "^0.3.0",
+    "socket.io": "^1.3.4",
     "twilio": "^1.10.0",
     "xml2js": "^0.4.4"
   },
