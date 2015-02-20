@@ -7,7 +7,7 @@ var proxyquire = require('proxyquire');
 var client = require('../modules/client');
 
 var deluge = proxyquire('../modules/clients/deluge', {
-  'deluge-add': function(a,s,d,f) {
+  'deluge': function(a,s,d,f) {
     console.log("Here with the Dee Oh Double Gee");
     return true;
   }
