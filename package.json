@@ -26,6 +26,8 @@
     "deluge": "^1.5.1",
     "express": "^4.10.8",
     "express-handlebars": "^1.1.0",
+    "forever": "^0.14.1",
+    "forever-monitor": "^1.5.2",
     "lodash": "^2.4.1",
     "node-jsx": "^0.12.4",
     "react": "^0.12.2",
