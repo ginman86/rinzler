@@ -17,7 +17,7 @@ deluge = require('deluge')(delugeUrl, password, downloadLocation);
 
 var Deluge = {
   add: function(magnet, callback) {
-    deluge.add(magnet, callback);
+    deluge.add(magnet, null, callback);
   }
 };
 
